@@ -14,82 +14,43 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 var(--default-layout-horizontal-padding);
 }
-.search,
-.search-results {
-    width: 361px;
-}
-.search {
-    position: relative;
-    height: var(--search-height);
-    padding-left: 16px;
-    background-color: rgba(22, 24, 35, 0.06);
-    border: 1.5px solid transparent;
-    border-radius: 92px;
-    overflow: hidden;
-    display: flex;
-    &:focus-within {
-        border-color: rgba(22, 24, 35, 0.2);
-    }
-    & input {
-        flex: 1;
-        width: 100%;
-        height: 100%;
-        background-color: transparent;
-        color: var(---black);
-        font-size: 1.6rem;
-        caret-color: var(--primary);
-    }
-    & input:not(:placeholder-shown) ~ .search-btn {
-        color: rgba(22, 24, 35, 0.75);
-    }
-    &-title {
-        padding: 5px 12px;
-        font-size: 1.4rem;
-        font-weight: 600;
-        color: rgba(22, 24, 35, 0.5);
-    }
-}
+
 // .loading {
 //     border: none;
 // }
-.clear,
-.loading {
-    position: absolute;
-    right: calc(var(--search-btn-width) + 16px);
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgba(22, 24, 35, 0.34);
-}
 
-.search-btn {
-    width: var(--search-btn-width);
-    height: 100%;
-    font-size: 2rem;
-    color: rgba(22, 24, 35, 0.34);
-    position: relative;
-    &::after {
-        position: absolute;
-        content: '';
-        width: 1px;
-        height: calc(var(--search-height) - (var(--search-top-space) * 2));
-        left: 0;
-        bottom: var(--search-top-space);
-        background-color: #ccc;
-    }
-    &:hover {
-        background-color: rgba(22, 24, 35, 0.03);
-        cursor: pointer;
-    }
-    &:active {
-        background-color: rgba(22, 24, 35, 0.06);
-    }
-}
 .actions {
     display: flex;
     align-items: center;
     // text-align: center;
+    justify-content: center;
 }
 .custom-login {
     color: red;
+}
+.more-btn {
+    background-color: transparent;
+    margin-left: 16px;
+    padding: 4px 8px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+// CurrentUser
+.actions-btn {
+    background-color: transparent;
+    font-size: 2.2rem;
+    cursor: pointer;
+    padding: 4px 12px;
+    display: flex;
+    align-items: center;
+}
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 12px;
+    cursor: pointer;
 }

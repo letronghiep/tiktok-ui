@@ -1,5 +1,4 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
 
 :root {
     --primary: #fe2c55;
@@ -8,6 +7,7 @@
     // Default layout
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
+    --default-layout-horizontal-padding: 24px;
 }
 * {
     margin: 0;
@@ -19,10 +19,31 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'ProximaNova', sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizespeed;
+}
+// Fonts Embedded
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/Proxima-Nova-Regular\ \(1\).woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/Proxima-Nova-Semibold.woff2');
+    font-weight: 600;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/Proxima-Nova-Bold.woff');
+    font-weight: 700;
+}
+@font-face {
+    font-family: SofiaPro;
+    src: url('/assets/fonts/sofiapro-semibold.otf');
+    font-weight: 700;
 }
 button,
 input,
@@ -31,6 +52,21 @@ input,
     outline: none;
 }
 a[href] {
-    // color: var(--text-color);
+    color: var(--text-color);
     text-decoration: none;
+}
+// Tippy\
+body {
+    .tippy-box {
+        line-height: 2.2rem;
+        font-size: 1.6rem;
+        background-color: #545454eb;
+        border-radius: 8px;
+    }
+    .tippy-content {
+        padding: 8px;
+    }
+    .tippy-arrow {
+        color: #545454eb;
+    }
 }
