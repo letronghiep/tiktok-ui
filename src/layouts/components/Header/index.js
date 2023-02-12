@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react';
 import Menu from '~/components/Popper/Menu';
 import 'tippy.js/dist/tippy.css'; // optional
+import { Link } from 'react-router-dom';
 // Components
 
 import Button from '~/components/Button';
@@ -10,6 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 import Image from '~/components/Image';
+import config from '~/config';
 import {
     faEarthAsia,
     faEllipsisVertical,
@@ -22,7 +24,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { InboxIcon, MessageIcon, UploadIcon } from '~/components/Icons';
-import Search from '~/components/Layout/components/Search';
+import Search from '~/layouts/components/Search';
+
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
     {
@@ -107,7 +110,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img src={images.logo} alt="TikTok" />
+                <Link to={config.routes.home} className={cx('logo-link')}>
+                    <img src={images.logo} alt="TikTok" />
+                </Link>
                 {/* Sẻarch */}
                 <Search />
                 <div className={cx('actions')}>

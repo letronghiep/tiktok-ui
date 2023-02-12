@@ -4,7 +4,12 @@
     --search-btn-width: 52px;
     height: var(--default-layout-header-height, 60px);
     box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    left: 0;
     width: 100%;
+    background-color: #fff;
     display: flex;
     justify-content: center;
 }
@@ -16,7 +21,9 @@
     justify-content: space-between;
     padding: 0 var(--default-layout-horizontal-padding);
 }
-
+.logo-link {
+    display: flex;
+}
 // .loading {
 //     border: none;
 // }
